@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Topla
   - Engel
+  - coin
   layers:
   - Default
   - TransparentFX

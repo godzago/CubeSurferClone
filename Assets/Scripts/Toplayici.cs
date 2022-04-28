@@ -6,6 +6,7 @@ public class Toplayici : MonoBehaviour
 {
     GameObject anaKüp;
     int yukseklik;
+    float coin;
     void Start()
     {
         anaKüp = GameObject.Find("MainCube");
@@ -22,6 +23,10 @@ public class Toplayici : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
+        if(other.gameObject.tag == "coin")
+        {
+                     
+        }
         if(other.gameObject.tag == "Topla"&& other.gameObject.GetComponent<TolanabilirCube>().GetToplandiMi() == false)
         {
             yukseklik += 1;
