@@ -25,7 +25,7 @@ public class Toplayici : MonoBehaviour
     {
         if(other.gameObject.tag == "coin")
         {
-                     
+            //  other.gameObject.GetComponent<CoinManager>()       
         }
         if(other.gameObject.tag == "Topla"&& other.gameObject.GetComponent<TolanabilirCube>().GetToplandiMi() == false)
         {
