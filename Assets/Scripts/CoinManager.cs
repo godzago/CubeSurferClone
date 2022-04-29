@@ -15,8 +15,12 @@ public class CoinManager : MonoBehaviour
     {
         
     }
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider collider)
     {
-        coin++;
+        if (collider.gameObject.tag == "player")
+        {
+            coin++;
+            cointext.text = coin.ToString();
+        }
     }
 }

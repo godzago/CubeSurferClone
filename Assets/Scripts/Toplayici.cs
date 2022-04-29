@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Toplayici : MonoBehaviour
 {
+    [SerializeField] float coin;
+    [SerializeField] Text cointext;
+    public GameObject CoinNesnesi;
     GameObject anaKüp;
     int yukseklik;
-    float coin;
     void Start()
     {
+        CoinNesnesi = GameObject.Find("coin");
         anaKüp = GameObject.Find("MainCube");
     }
 
@@ -23,11 +26,13 @@ public class Toplayici : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "coin")
+        if (other.gameObject.tag == "coin")
         {
-            //  other.gameObject.GetComponent<CoinManager>()       
+            coin++;
+            cointext.text = coin.ToString();
+            Destroy(CoinNesnesi);
         }
-        if(other.gameObject.tag == "Topla"&& other.gameObject.GetComponent<TolanabilirCube>().GetToplandiMi() == false)
+        if (other.gameObject.tag == "Topla"&& other.gameObject.GetComponent<TolanabilirCube>().GetToplandiMi() == false)
         {
             yukseklik += 1;
             other.gameObject.GetComponent<TolanabilirCube>().ToplandiYap();
