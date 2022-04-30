@@ -6,12 +6,10 @@ public class Toplayici : MonoBehaviour
 {
     [SerializeField] float coin;
     [SerializeField] Text cointext;
-    public GameObject CoinNesnesi;
     GameObject anaKüp;
     int yukseklik;
     void Start()
     {
-        CoinNesnesi = GameObject.Find("coin");
         anaKüp = GameObject.Find("MainCube");
     }
 
@@ -30,7 +28,7 @@ public class Toplayici : MonoBehaviour
         {
             coin++;
             cointext.text = coin.ToString();
-            Destroy(CoinNesnesi);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "Topla"&& other.gameObject.GetComponent<TolanabilirCube>().GetToplandiMi() == false)
         {
