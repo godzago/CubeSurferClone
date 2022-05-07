@@ -19,6 +19,7 @@ public class TolanabilirCube : MonoBehaviour
             if (transform.parent != null)
             {
                 transform.localPosition = new Vector3(0, -index, 0);
+                gameObject.GetComponent<CharakterCarpma>().ChrakterCarpmaAnim();
             }
         }       
     }
@@ -30,6 +31,7 @@ public class TolanabilirCube : MonoBehaviour
             transform.parent = null;
             GetComponent<BoxCollider>().enabled = false;
             other.gameObject.GetComponent<BoxCollider>().enabled = false;
+            other.gameObject.GetComponent<CharakterCarpma>().ChrakterCarpmaAnim();
         }
     }
     public bool GetToplandiMi()
