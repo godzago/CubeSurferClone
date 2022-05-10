@@ -6,6 +6,10 @@ public class CharakterCarpma : MonoBehaviour
 {
     public Animator animator;
 
+    public void Awake()
+    {
+        gameObject.GetComponent<Animation>();
+    }
     public void ChrakterCarpmaAnim()
     {
         animator.SetBool("IsCarpma", true);
