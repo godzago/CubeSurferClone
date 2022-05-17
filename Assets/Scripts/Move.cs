@@ -6,11 +6,6 @@ public class Move : MonoBehaviour
 {
     [SerializeField] private float ileriGitme;
     [SerializeField] private float yanaGitme;
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         float yatakEksen = Input.GetAxis("Horizontal") * yanaGitme *Time.deltaTime;

@@ -8,15 +8,24 @@ public class Toplayici : MonoBehaviour
     [SerializeField] Text cointext;
     GameObject anaKüp;
     int yukseklik;
+
+    [SerializeField] GameObject GoldPref;
+    [SerializeField] GameObject GoldPanel;
+    [SerializeField] Rigidbody rgb;
     void Start()
     {
+        rgb = GetComponent<Rigidbody>();
         anaKüp = GameObject.Find("MainCube");
     }
-
     void Update()
     {
         anaKüp.transform.position = new Vector3(transform.position.x, yukseklik + 1, transform.position.z);
         this.transform.localPosition = new Vector3(0, -yukseklik, 0);
+    }
+    private void FixedUpdate()
+    {
+        float h = Input.GetAxis("Horizontal");
+        rgb.velocity = new Vector3(h * 25, rgb.velocity.y);
     }
     public void yukseklikAzalt()
     {
@@ -29,6 +38,7 @@ public class Toplayici : MonoBehaviour
             coin++;
             cointext.text = coin.ToString();
             Destroy(other.gameObject);
+            Instantiate(GoldPref, Camera.main.WorldToScreenPoint(transform.position), GoldPanel.transform.rotation, GoldPanel.transform);
         }
         if (other.gameObject.tag == "Topla"&& other.gameObject.GetComponent<TolanabilirCube>().GetToplandiMi() == false)
         {
