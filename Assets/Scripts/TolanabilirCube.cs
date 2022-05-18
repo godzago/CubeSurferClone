@@ -19,7 +19,6 @@ public class TolanabilirCube : MonoBehaviour
             if (transform.parent != null)
             {
                 transform.localPosition = new Vector3(0, -index, 0);
-               // gameObject.GetComponent<CharakterCarpma>().ChrakterCarpmaAnim();
             }
         }       
     }

@@ -12,6 +12,8 @@ public class Toplayici : MonoBehaviour
     [SerializeField] GameObject GoldPref;
     [SerializeField] GameObject GoldPanel;
     [SerializeField] Rigidbody rgb;
+
+    [SerializeField] public AudioClip _Clip;
     void Start()
     {
         rgb = GetComponent<Rigidbody>();
@@ -30,6 +32,7 @@ public class Toplayici : MonoBehaviour
     public void yukseklikAzalt()
     {
         yukseklik --;
+
     }
     public void OnTriggerEnter(Collider other)
     {
@@ -39,6 +42,7 @@ public class Toplayici : MonoBehaviour
             cointext.text = coin.ToString();
             Destroy(other.gameObject);
             Instantiate(GoldPref, Camera.main.WorldToScreenPoint(transform.position), GoldPanel.transform.rotation, GoldPanel.transform);
+            SoundManager.Instance.PlaySound(_Clip);
         }
         if (other.gameObject.tag == "Topla"&& other.gameObject.GetComponent<TolanabilirCube>().GetToplandiMi() == false)
         {
@@ -46,6 +50,13 @@ public class Toplayici : MonoBehaviour
             other.gameObject.GetComponent<TolanabilirCube>().ToplandiYap();
             other.gameObject.GetComponent<TolanabilirCube>().IndexAyarla(yukseklik);
             other.gameObject.transform.parent = anaKüp.transform;       
+        }
+        if (other.gameObject.tag == "Finish")
+        {
+            yukseklik += 2;
+            other.gameObject.GetComponent<TolanabilirCube>().ToplandiYap();
+          //  other.gameObject.GetComponent<TolanabilirCube>().IndexAyarla(yukseklik);
+            other.gameObject.transform.parent = anaKüp.transform;
         }
     }
 }
