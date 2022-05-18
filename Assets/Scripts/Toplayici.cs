@@ -55,7 +55,7 @@ public class Toplayici : MonoBehaviour
         {
             yukseklik += 2;
             other.gameObject.GetComponent<TolanabilirCube>().ToplandiYap();
-          //  other.gameObject.GetComponent<TolanabilirCube>().IndexAyarla(yukseklik);
+            other.gameObject.GetComponent<TolanabilirCube>().IndexAyarla(yukseklik);
             other.gameObject.transform.parent = anaKüp.transform;
         }
     }

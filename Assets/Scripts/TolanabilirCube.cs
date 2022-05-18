@@ -31,6 +31,14 @@ public class TolanabilirCube : MonoBehaviour
             GetComponent<BoxCollider>().enabled = false;
             other.gameObject.GetComponent<BoxCollider>().enabled = false;
         }
+
+        if (other.gameObject.tag == "Finish")
+        {
+            Toplayici.yukseklikAzalt();
+            transform.parent = null;
+            GetComponent<BoxCollider>().enabled = false;
+            other.gameObject.GetComponent<BoxCollider>().enabled = false;
+        }
     }
     public bool GetToplandiMi()
     {
