@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Toplayici : MonoBehaviour
 {
+    [SerializeField] ParticleSystem particle;
+
     [SerializeField] float coin;
     [SerializeField] Text cointext;
     GameObject anaKüp;
@@ -14,10 +16,12 @@ public class Toplayici : MonoBehaviour
     [SerializeField] Rigidbody rgb;
 
     [SerializeField] public AudioClip _Clip;
+
     void Start()
     {
         rgb = GetComponent<Rigidbody>();
         anaKüp = GameObject.Find("MainCube");
+        particle.Stop();
     }
     void Update()
     {
@@ -42,6 +46,7 @@ public class Toplayici : MonoBehaviour
             cointext.text = coin.ToString();
             Destroy(other.gameObject);
             Instantiate(GoldPref, Camera.main.WorldToScreenPoint(transform.position), GoldPanel.transform.rotation, GoldPanel.transform);
+            particle.Play();
             SoundManager.Instance.PlaySound(_Clip);
         }
         if (other.gameObject.tag == "Topla"&& other.gameObject.GetComponent<TolanabilirCube>().GetToplandiMi() == false)
@@ -50,13 +55,6 @@ public class Toplayici : MonoBehaviour
             other.gameObject.GetComponent<TolanabilirCube>().ToplandiYap();
             other.gameObject.GetComponent<TolanabilirCube>().IndexAyarla(yukseklik);
             other.gameObject.transform.parent = anaKüp.transform;       
-        }
-        if (other.gameObject.tag == "Finish")
-        {
-            yukseklik += 2;
-            other.gameObject.GetComponent<TolanabilirCube>().ToplandiYap();
-            other.gameObject.GetComponent<TolanabilirCube>().IndexAyarla(yukseklik);
-            other.gameObject.transform.parent = anaKüp.transform;
         }
     }
 }

@@ -7,11 +7,11 @@ public class TolanabilirCube : MonoBehaviour
     bool ToplandiMi;
     int index;
     public Toplayici Toplayici;
+
     void Start()
     {
         ToplandiMi = false;
     }
-
     void Update()
     {
         if(ToplandiMi == true)
@@ -25,14 +25,6 @@ public class TolanabilirCube : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Engel")
-        {
-            Toplayici.yukseklikAzalt();
-            transform.parent = null;
-            GetComponent<BoxCollider>().enabled = false;
-            other.gameObject.GetComponent<BoxCollider>().enabled = false;
-        }
-
-        if (other.gameObject.tag == "Finish")
         {
             Toplayici.yukseklikAzalt();
             transform.parent = null;
