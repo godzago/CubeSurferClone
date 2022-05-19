@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Toplayici : MonoBehaviour
 {
-    [SerializeField] float coin;
+    [SerializeField] int coin;
     [SerializeField] Text cointext;
 
     [SerializeField] GameObject anaKüp;
@@ -43,13 +43,14 @@ public class Toplayici : MonoBehaviour
     {
         if (other.gameObject.tag == "coin")
         {       
-            coin++;
+            coin++;          
             cointext.text = coin.ToString();
+            PlayerPrefs.SetInt("puan", coin);
             Destroy(other.gameObject);
             Instantiate(GoldPref, Camera.main.WorldToScreenPoint(transform.position), GoldPanel.transform.rotation, GoldPanel.transform);
             particle.transform.position = gameObject.transform.position;
             particle.Play();
-            SoundManager.Instance.PlaySound(_Clip);
+            SoundManager.Instance.PlaySound(_Clip);            
         }
         if (other.gameObject.tag == "Topla"&& other.gameObject.GetComponent<TolanabilirCube>().GetToplandiMi() == false)
         {
