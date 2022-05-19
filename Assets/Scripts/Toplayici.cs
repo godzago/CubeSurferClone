@@ -4,18 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Toplayici : MonoBehaviour
 {
-    [SerializeField] ParticleSystem particle;
-
     [SerializeField] float coin;
     [SerializeField] Text cointext;
-    GameObject anaKüp;
-    int yukseklik;
+
+    [SerializeField] GameObject anaKüp;
+    [SerializeField] int yukseklik;
 
     [SerializeField] GameObject GoldPref;
     [SerializeField] GameObject GoldPanel;
     [SerializeField] Rigidbody rgb;
 
     [SerializeField] public AudioClip _Clip;
+
+    [SerializeField] ParticleSystem particle;
 
     void Start()
     {
@@ -41,11 +42,12 @@ public class Toplayici : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "coin")
-        {
+        {       
             coin++;
             cointext.text = coin.ToString();
             Destroy(other.gameObject);
             Instantiate(GoldPref, Camera.main.WorldToScreenPoint(transform.position), GoldPanel.transform.rotation, GoldPanel.transform);
+            particle.transform.position = gameObject.transform.position;
             particle.Play();
             SoundManager.Instance.PlaySound(_Clip);
         }
