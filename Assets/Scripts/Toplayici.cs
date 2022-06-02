@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class Toplayici : MonoBehaviour
 {
     [SerializeField] int coin;
@@ -20,6 +21,7 @@ public class Toplayici : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
         rgb = GetComponent<Rigidbody>();
         anaKüp = GameObject.Find("MainCube");
         particle.Stop();
@@ -37,15 +39,14 @@ public class Toplayici : MonoBehaviour
     public void yukseklikAzalt()
     {
         yukseklik --;
-
     }
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "coin")
         {       
-            coin++;          
+            coin++;
+            PlayerPrefs.SetInt("Mustafa", coin);
             cointext.text = coin.ToString();
-            PlayerPrefs.SetInt("puan", coin);
             Destroy(other.gameObject);
             Instantiate(GoldPref, Camera.main.WorldToScreenPoint(transform.position), GoldPanel.transform.rotation, GoldPanel.transform);
             particle.transform.position = gameObject.transform.position;

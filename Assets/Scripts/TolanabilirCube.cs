@@ -10,6 +10,7 @@ public class TolanabilirCube : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
         ToplandiMi = false;
     }
     void Update()

@@ -9,6 +9,11 @@ TagManager:
   - coin
   - GoldUI
   - GoldPanel
+  - FxTemporaire
+  - Finish3x
+  - Finish2x
+  - Finish4x
+  - Finish5x
   layers:
   - Default
   - TransparentFX
