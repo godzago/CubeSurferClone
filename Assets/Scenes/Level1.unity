@@ -11084,7 +11084,7 @@ PrefabInstance:
     - target: {fileID: -1599826595754709761, guid: 7886ccab7e6956444b50bd1c02896fc2,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Finish5x
       objectReference: {fileID: 0}
     - target: {fileID: -516098083770646512, guid: 7886ccab7e6956444b50bd1c02896fc2,
         type: 3}
@@ -11255,91 +11255,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.029428367, y: 0.020000001, z: 0.019915992}
   m_Center: {x: 0.0044244803, y: -8.73115e-11, z: -0.00033308097}
---- !u!114 &1952758557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952758555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f57de49e769d494abb7d48ada9ff59a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myCoin: 0
-  YourScore: {fileID: 77966901}
-  FinishScore: {fileID: 213621217}
-  Silider: {fileID: 302011621}
-  CurrnetScore: {fileID: 531172316}
---- !u!114 &1952758558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952758552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f57de49e769d494abb7d48ada9ff59a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myCoin: 0
-  YourScore: {fileID: 77966901}
-  FinishScore: {fileID: 213621217}
-  Silider: {fileID: 302011621}
-  CurrnetScore: {fileID: 531172316}
---- !u!114 &1952758559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952758549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f57de49e769d494abb7d48ada9ff59a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myCoin: 0
-  YourScore: {fileID: 77966901}
-  FinishScore: {fileID: 213621217}
-  Silider: {fileID: 302011621}
-  CurrnetScore: {fileID: 531172316}
---- !u!114 &1952758560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952758543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f57de49e769d494abb7d48ada9ff59a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myCoin: 0
-  YourScore: {fileID: 77966901}
-  FinishScore: {fileID: 213621217}
-  Silider: {fileID: 302011621}
-  CurrnetScore: {fileID: 531172316}
---- !u!114 &1952758572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952758546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f57de49e769d494abb7d48ada9ff59a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myCoin: 0
-  YourScore: {fileID: 77966901}
-  FinishScore: {fileID: 213621217}
-  Silider: {fileID: 302011621}
-  CurrnetScore: {fileID: 531172316}
 --- !u!1001 &1967820462
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12379,6 +12294,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 78c7b96639e9a7a469009b85d688b1ae, type: 3}
     - target: {fileID: 2333069183324060324, guid: 2122f9a4116c3644ea7d2697cc96a531,
         type: 3}
+      propertyPath: Silider
+      value: 
+      objectReference: {fileID: 302011621}
+    - target: {fileID: 2333069183324060324, guid: 2122f9a4116c3644ea7d2697cc96a531,
+        type: 3}
       propertyPath: "anaK\xFCp"
       value: 
       objectReference: {fileID: 1915113181}
@@ -12403,6 +12323,31 @@ PrefabInstance:
       propertyPath: GoldPanel
       value: 
       objectReference: {fileID: 531172316}
+    - target: {fileID: 2333069183324060324, guid: 2122f9a4116c3644ea7d2697cc96a531,
+        type: 3}
+      propertyPath: YourScore
+      value: 
+      objectReference: {fileID: 77966901}
+    - target: {fileID: 2333069183324060324, guid: 2122f9a4116c3644ea7d2697cc96a531,
+        type: 3}
+      propertyPath: FinishScore
+      value: 
+      objectReference: {fileID: 213621217}
+    - target: {fileID: 2333069183324060324, guid: 2122f9a4116c3644ea7d2697cc96a531,
+        type: 3}
+      propertyPath: CurrnetScore
+      value: 
+      objectReference: {fileID: 531172316}
+    - target: {fileID: 2333069183324060327, guid: 2122f9a4116c3644ea7d2697cc96a531,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.0060242
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333069183324060327, guid: 2122f9a4116c3644ea7d2697cc96a531,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.048664987
+      objectReference: {fileID: 0}
     - target: {fileID: 2333069183324060331, guid: 2122f9a4116c3644ea7d2697cc96a531,
         type: 3}
       propertyPath: m_Constraints
@@ -12420,6 +12365,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2333069184001090705, guid: 2122f9a4116c3644ea7d2697cc96a531,
         type: 3}
+      propertyPath: Silider
+      value: 
+      objectReference: {fileID: 302011621}
+    - target: {fileID: 2333069184001090705, guid: 2122f9a4116c3644ea7d2697cc96a531,
+        type: 3}
+      propertyPath: YourScore
+      value: 
+      objectReference: {fileID: 77966901}
+    - target: {fileID: 2333069184001090705, guid: 2122f9a4116c3644ea7d2697cc96a531,
+        type: 3}
       propertyPath: yanaGitme
       value: 5
       objectReference: {fileID: 0}
@@ -12428,6 +12383,16 @@ PrefabInstance:
       propertyPath: ileriGitme
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 2333069184001090705, guid: 2122f9a4116c3644ea7d2697cc96a531,
+        type: 3}
+      propertyPath: FinishScore
+      value: 
+      objectReference: {fileID: 213621217}
+    - target: {fileID: 2333069184001090705, guid: 2122f9a4116c3644ea7d2697cc96a531,
+        type: 3}
+      propertyPath: CurrnetScore
+      value: 
+      objectReference: {fileID: 531172316}
     - target: {fileID: 2333069184001090705, guid: 2122f9a4116c3644ea7d2697cc96a531,
         type: 3}
       propertyPath: _currentRunningSpeed
@@ -12451,7 +12416,7 @@ PrefabInstance:
     - target: {fileID: 2333069184001090706, guid: 2122f9a4116c3644ea7d2697cc96a531,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -184.77
+      value: -185.57
       objectReference: {fileID: 0}
     - target: {fileID: 2333069184001090706, guid: 2122f9a4116c3644ea7d2697cc96a531,
         type: 3}
@@ -12486,6 +12451,16 @@ PrefabInstance:
     - target: {fileID: 2333069184001090706, guid: 2122f9a4116c3644ea7d2697cc96a531,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333069184001090733, guid: 2122f9a4116c3644ea7d2697cc96a531,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333069184001090733, guid: 2122f9a4116c3644ea7d2697cc96a531,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2333069184001090734, guid: 2122f9a4116c3644ea7d2697cc96a531,

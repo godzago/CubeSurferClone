@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class Move : MonoBehaviour
 {
     [SerializeField] float _currentRunningSpeed;
@@ -30,4 +31,5 @@ public class Move : MonoBehaviour
     {
         _currentRunningSpeed = value;
     }
+
 }

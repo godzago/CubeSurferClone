@@ -32,6 +32,35 @@ public class TolanabilirCube : MonoBehaviour
             GetComponent<BoxCollider>().enabled = false;
             other.gameObject.GetComponent<BoxCollider>().enabled = false;
         }
+        if (other.gameObject.tag == "Finish2x")
+        {
+            Toplayici.yukseklikAzalt();
+            transform.parent = null;
+            GetComponent<BoxCollider>().enabled = false;
+            other.gameObject.GetComponent<BoxCollider>().enabled = false;
+        }
+        if (other.gameObject.tag == "Finish3x")
+        {
+            Toplayici.yukseklikAzalt();
+            transform.parent = null;
+            GetComponent<BoxCollider>().enabled = false;
+            other.gameObject.GetComponent<BoxCollider>().enabled = false;
+        }
+        if (other.gameObject.tag == "Finish4x")
+        {
+            Toplayici.yukseklikAzalt();
+            transform.parent = null;
+            GetComponent<BoxCollider>().enabled = false;
+            other.gameObject.GetComponent<BoxCollider>().enabled = false;
+        }
+        if (other.gameObject.tag == "Finish5x")
+        {
+            Toplayici.yukseklikAzalt();
+            transform.parent = null;
+            GetComponent<BoxCollider>().enabled = false;
+            other.gameObject.GetComponent<BoxCollider>().enabled = false;
+        }
+
     }
     public bool GetToplandiMi()
     {

@@ -19,6 +19,11 @@ public class Toplayici : MonoBehaviour
 
     [SerializeField] ParticleSystem particle;
 
+    [SerializeField] Text YourScore;
+    [SerializeField] GameObject FinishScore;
+    [SerializeField] GameObject Silider;
+    [SerializeField] GameObject CurrnetScore;
+
     void Start()
     {
         Time.timeScale = 1;
@@ -60,5 +65,42 @@ public class Toplayici : MonoBehaviour
             other.gameObject.GetComponent<TolanabilirCube>().IndexAyarla(yukseklik);
             other.gameObject.transform.parent = anaKüp.transform;       
         }
+        if (other.gameObject.tag == "Finish2x" && yukseklik == 1)
+         {
+             Time.timeScale = 0;
+             coin *= 2;
+             YourScore.text = coin.ToString();
+             FinishScore.SetActive(true);
+             Silider.SetActive(false);
+             CurrnetScore.SetActive(false);
+         }
+         if (other.gameObject.tag == "Finish3x" && yukseklik == 2)
+         {
+             Time.timeScale = 0;
+             coin *= 3;
+             YourScore.text = coin.ToString();
+             FinishScore.SetActive(true);
+             Silider.SetActive(false);
+             CurrnetScore.SetActive(false);
+         }
+        if (other.gameObject.tag == "Finish4x" && yukseklik == 3)
+        {
+            Time.timeScale = 0;
+            coin *= 4 ;
+            YourScore.text = coin.ToString();
+            FinishScore.SetActive(true);
+            Silider.SetActive(false);
+            CurrnetScore.SetActive(false);
+        }
+        if (other.gameObject.tag == "Finish5x" && yukseklik == 4)
+        {
+            Time.timeScale = 0;
+            coin *= 5;
+            YourScore.text = coin.ToString();
+            FinishScore.SetActive(true);
+            Silider.SetActive(false);
+            CurrnetScore.SetActive(false);
+        }
+
     }
 }
