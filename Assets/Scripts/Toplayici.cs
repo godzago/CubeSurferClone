@@ -26,7 +26,7 @@ public class Toplayici : MonoBehaviour
 
     void Start()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 0;
         rgb = GetComponent<Rigidbody>();
         anaKüp = GameObject.Find("MainCube");
         particle.Stop();
