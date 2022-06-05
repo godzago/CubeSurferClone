@@ -23,7 +23,6 @@ public class Toplayici : MonoBehaviour
     [SerializeField] GameObject FinishScore;
     [SerializeField] GameObject Silider;
     [SerializeField] GameObject CurrnetScore;
-
     void Start()
     {
         Time.timeScale = 0;
