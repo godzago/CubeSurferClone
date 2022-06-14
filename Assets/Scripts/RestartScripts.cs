@@ -17,6 +17,7 @@ public class RestartScripts : MonoBehaviour
     public Animator Myanimator;
     public void Start()
     {
+        Myanimator.SetBool("SwipeToRunAnim", true);
         maxDistance = finisLine.transform.position.z - myCharactertransform.transform.position.z;
     }
     public void Update()
